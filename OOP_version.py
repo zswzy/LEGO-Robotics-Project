@@ -270,7 +270,7 @@ class BigRobot:
          t = self.move(self,vx,0,0)
 
       return 0
-
+   #KEEP AN ANGLE
    def trake_angle(self, target_angle=180, tracking_time=10*1000):
       # 
       self.ev3.speaker.beep()
@@ -288,6 +288,7 @@ class BigRobot:
 
          t = self.move(0,0,omega_deg)
 
+   #MOVE TO A TARGET (LOCAL)
    def move_to_target_local_simple(self,target,run_time=30*1000,limit_distance=50):
       # in local axes
       x_position_target = target['x']
@@ -320,6 +321,7 @@ class BigRobot:
 
          t = self.move(vx,vy,0)
 
+   #MOVE TO A TARGET(GLOBAL)
    def move_to_target_global_simple(self,target,run_time=30*1000,limit_distance=50):
       # in local axes
       x_position_target = target['x']
